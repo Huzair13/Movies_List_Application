@@ -41,9 +41,9 @@ app.post('/addMovies', async (req, res) => {
     const newMovie={
         movieName : movieName,
         director : director,
-        relaseYear :relaseYear,
+        relaseYear :parseInt(relaseYear),
         language :language,
-        rating:rating
+        rating : parseFloat(rating)
     };
 
     dbo.collection("MoviesData").insertOne(newMovie)

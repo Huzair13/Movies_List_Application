@@ -31,13 +31,19 @@ const addMovies=(movieDetails)=>{
     let language=movieDetails.language;
     let rating =movieDetails.rating;
 
+    if(isNaN(relaseYear)|| isNaN(rating)){
+        console.log('Error : Releas Year and Rating must be numbers !!!');
+        return false;
+    }
+
     const newMovie={
         movieName : movieName,
         director : director,
-        relaseYear :relaseYear,
+        relaseYear : parseInt(relaseYear),
         language :language,
-        rating:rating
+        rating:parseFloat(rating)
     };
+
 
     const movies = readMoviesFromFile();
 
