@@ -1,15 +1,19 @@
 {
-    "version" :2,
-    "builds" :[
+    "version": 2,
+    "builds": [
         {
-            "src" : "./app.js",
-            "use" :"@vercel/node"
+            "src": "movies_list_application_mongoDB_used/app.js",
+            "use": "@vercel/node"
         }
     ],
-    "routes":[
+    "routes": [
         {
-            "src" :"/(.*)",
-            "dest":"/"
+            "src": "/api/(.*)",
+            "dest": "movies_list_application_mongoDB_used/routes/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "movies_list_application_mongoDB_used/app.js"
         }
     ]
 }
