@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb');
 let dbo;
 
 const connectToDatabase = async () => {
-    const url_mongodb = 'mongodb+srv://Huzair13:Huz%402002@cluster0.bioliew.mongodb.net/';
+    const url_mongodb = process.env.MONGODB_URI;
 
     try {
         const client = await MongoClient.connect(url_mongodb, { useNewUrlParser: true, useUnifiedTopology: true });
