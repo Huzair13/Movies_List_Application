@@ -9,11 +9,11 @@
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "movies_list_application_mongoDB_used/routes/$1"
+            "dest": "/routes/$1"
         },
         {
             "src": "/(.*)",
-            "dest": "movies_list_application_mongoDB_used/app.js"
+            "dest": "/app.js"
         }
     ]
 }
